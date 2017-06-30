@@ -8,7 +8,7 @@ Installation
 ^^^^^^^^^^^^^
 Use ``PIP`` or ``easy_install``: ::
 
-    pip install -e git+git://github.com/guilhermetavares/python-cielo.git#egg=python-cielo
+    pip install -e git+git://github.com/Brunofb/python-cielo.git#egg=python-cielo
 
 Usage
 ^^^^^
