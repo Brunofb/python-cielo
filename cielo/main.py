@@ -456,6 +456,8 @@ class PaymentAttempt(BaseCieloObject):
             transaction=CASH,
             sandbox=False,
             use_ssl=None,
+            gerar_token=False,
+            version='1.2.1',            
         ):
 
         super(PaymentAttempt, self).__init__(sandbox=sandbox, use_ssl=use_ssl)
@@ -486,6 +488,9 @@ class PaymentAttempt(BaseCieloObject):
         self.card_holders_name = card_holders_name
         self._authorized = False
         self.sandbox = sandbox
+        self.gerar_token = 'true' if gerar_token else 'false'
+        self.xml_transaction_id = self.get_xml_transaction_id()
+        self.version = version        
 
 
 class UpdatePaymentAttempt(BaseCieloObject):
